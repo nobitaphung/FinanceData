@@ -25,6 +25,7 @@ public class StockDataApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StockDataApplication.class, args);
+		System.out.println("Start Web server!!!");
 	}
 
 	@Override
