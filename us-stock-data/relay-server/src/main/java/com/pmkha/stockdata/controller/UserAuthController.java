@@ -44,6 +44,13 @@ public class UserAuthController {
     JwtUtils jwtUtils;
 
     @PostMapping("/signup")
+    /** Test API with Postman
+     * {
+     *     "username": "manhkha",
+     *     "email": "pmkha@humaxdigital.com",
+     *     "password" : "10090720"
+     * }
+     * **/
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signupRequest) {
         if(userRepository.existsByUsername(signupRequest.getUsername())) {
             return ResponseEntity
